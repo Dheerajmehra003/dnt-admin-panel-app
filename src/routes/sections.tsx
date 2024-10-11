@@ -18,6 +18,7 @@ export const HomePage = lazy(() => import('src/pages/home'));
 export const PatientPage = lazy(() => import("src/pages/Patient/Patient"));
 export const DoctorPage = lazy(() => import("src/pages/Doctor"));
 export const ProfilePage = lazy(() => import("src/pages/Profile/Profile"));
+export const DoctorApprovalPage = lazy(() => import("src/pages/approvals/Doctor/Doctor"))
 // export const BlogPage = lazy(() => import('src/pages/blog'));
 // export const UserPage = lazy(() => import('src/pages/user'));
 export const SignInPage = lazy(() => import('src/pages/auth/sign-in'));
@@ -95,7 +96,7 @@ export function Router() {
           path: 'doctor-approval', 
           element: ( 
               <ProtectedRoute isLoggedIn={isLoggedIn}>
-                <DoctorPage />
+                <DoctorApprovalPage />
               </ProtectedRoute>
             )
          },

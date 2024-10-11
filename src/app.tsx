@@ -12,6 +12,7 @@ import { Iconify } from 'src/components/iconify';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchProfileOnLoad } from './store/actions';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 // ----------------------------------------------------------------------
