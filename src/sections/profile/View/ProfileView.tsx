@@ -20,6 +20,10 @@ import { a11yProps } from 'src/utils/helper';
 import { TabPanel } from 'src/layouts/components/Profile/components/Util';
 
 import { ViewProfile } from './components/ViewProfile';
+import Personal from './components/Personal';
+import MyAccount from './components/MyAccount';
+import Password from './components/Password';
+import Settings from './components/Settings';
 
 // ----------------------------------------------------------------------
 
@@ -128,7 +132,16 @@ export function ProfileView() {
                   </TabPanel>
                   <TabPanel value={value} index={1} dir={theme.direction}>
                     {/* <SettingTab data={settingData} handleClosePopover={handleClosePopover} /> */}
-                        <div>setting tabv</div>
+                        <Personal />
+                  </TabPanel>
+                  <TabPanel value={value} index={2} dir={theme.direction}>
+                    <MyAccount />
+                  </TabPanel>
+                  <TabPanel value={value} index={3} dir={theme.direction}>
+                    <Password />
+                  </TabPanel>
+                  <TabPanel value={value} index={4} dir={theme.direction}>
+                    <Settings />
                   </TabPanel>
                 </MainCard>
     </DashboardContent>

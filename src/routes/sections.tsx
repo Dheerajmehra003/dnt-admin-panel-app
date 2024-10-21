@@ -10,6 +10,7 @@ import { RootState } from 'src/store/reducers';
 import { AuthLayout } from 'src/layouts/auth';
 import { DashboardLayout } from 'src/layouts/dashboard';
 import { ProtectedRoute } from './components';
+import ProfileEdit from 'src/sections/profile/View/ProfileEdit';
 
 
 // ----------------------------------------------------------------------
@@ -79,9 +80,17 @@ export function Router() {
         { 
           path: 'profile/:id', 
           element: ( 
-            <ProtectedRoute isLoggedIn={isLoggedIn}>
+            // <ProtectedRoute isLoggedIn={isLoggedIn}>
               <ProfilePage />
-            </ProtectedRoute>
+            // </ProtectedRoute>
+          )
+        },
+        { 
+          path: 'edit-profile/:id', 
+          element: ( 
+            // <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <ProfileEdit />
+            // </ProtectedRoute>
           )
         },
         {
